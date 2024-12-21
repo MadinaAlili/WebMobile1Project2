@@ -1,0 +1,68 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Spaghetti Bolognese",
+      "description": "A classic Italian pasta dish.",
+      "ingredients": [
+        "Spaghetti",
+        "Tomato Sauce",
+        "Ground Beef"
+      ],
+      "preparationSteps": [
+        "Boil spaghetti",
+        "Cook sauce",
+        "Combine"
+      ],
+      "tags": [
+        "Italian",
+        "Dinner"
+      ],
+      "difficulty": "Easy",
+      "lastUpdated": "2024-12-19T10:00:00Z"
+    },
+    {
+      "id": "29fa",
+      "title": "Pancakes",
+      "description": "Fluffy and delicious pancakes.",
+      "ingredients": [
+        "Flour",
+        "Eggs",
+        "Milk",
+        "Sugar"
+      ],
+      "preparationSteps": [
+        "Mix ingredients",
+        "Cook on skillet"
+      ],
+      "tags": [
+        "Breakfast",
+        "Easy"
+      ],
+      "difficulty": "Easy",
+      "lastUpdated": "2024-12-16T10:00:00Z"
+    },
+    {
+      "id": "283b",
+      "title": "Pancakes",
+      "description": "Fluffy and delicious pancakes.",
+      "ingredients": [
+        "Flour",
+        "Eggs",
+        "Milk",
+        "Sugar"
+      ],
+      "preparationSteps": [
+        "Mix ingredients",
+        "Cook on skillet"
+      ],
+      "tags": [
+        "Breakfast",
+        "Easy"
+      ],
+      "difficulty": "Easy",
+      "lastUpdated": "2024-12-19T10:00:00Z"
+    }
+  ],
+  "messages": []
+}
