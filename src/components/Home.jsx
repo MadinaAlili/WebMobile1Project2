@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <header className="home-container">
       <h1>Recipe Manager</h1>
-      <h3>ABC</h3>
+      <h3>this page was developed by Madina Alili and Aysu Rahimli</h3>
     </header>
   );
 };
