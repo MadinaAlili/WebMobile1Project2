@@ -1,67 +1,100 @@
 {
   "recipes": [
     {
-      "id": "1",
-      "title": "Spaghetti Bolognese",
-      "description": "A classic Italian pasta dish.",
+      "id": "7",
+      "title": "Plov",
+      "description": "A traditional Azerbaijani rice dish with saffron, dried fruits, and lamb.",
       "ingredients": [
-        "Spaghetti",
-        "Tomato Sauce",
-        "Ground Beef"
+        "Rice",
+        "Saffron",
+        "Lamb",
+        "Dried Apricots",
+        "Onions"
       ],
       "preparationSteps": [
-        "Boil spaghetti",
-        "Cook sauce",
-        "Combine"
+        "Cook lamb with onions and spices.",
+        "Steam rice with saffron.",
+        "Layer rice and lamb, add dried fruits."
       ],
       "tags": [
-        "Italian",
+        "Traditional",
         "Dinner"
       ],
-      "difficulty": "Easy",
-      "lastUpdated": "2024-12-19T10:00:00Z"
+      "difficulty": "Medium",
+      "lastUpdated": "2024-12-22T15:00:00Z",
+      "bannerImage": "https://blog.remitly.com/wp-content/uploads/2023/09/azervaijani-plov-scaled.jpg"
     },
     {
-      "id": "29fa",
-      "title": "Pancakes",
-      "description": "Fluffy and delicious pancakes.",
+      "id": "8",
+      "title": "Dushbara",
+      "description": "Tiny dumplings filled with meat, served in a flavorful broth.",
       "ingredients": [
         "Flour",
-        "Eggs",
-        "Milk",
-        "Sugar"
+        "Ground Lamb or Beef",
+        "Onions",
+        "Garlic",
+        "Broth"
       ],
       "preparationSteps": [
-        "Mix ingredients",
-        "Cook on skillet"
+        "Prepare dumpling dough and filling.",
+        "Shape into small dumplings.",
+        "Boil in broth and serve hot."
       ],
       "tags": [
-        "Breakfast",
-        "Easy"
+        "Soup",
+        "Traditional"
       ],
-      "difficulty": "Easy",
-      "lastUpdated": "2024-12-16T10:00:00Z"
+      "difficulty": "Hard",
+      "lastUpdated": "2024-12-22T13:05:28.778Z",
+      "bannerImage": "https://folt.az/wp-content/uploads/2023/07/%D0%92%D0%B0%D1%80%D0%B5%D0%BD%D0%B8%D0%BA%D0%B8-%D0%B8-%D0%BF%D0%B5%D0%BB%D1%8C%D0%BC%D0%B5%D0%BD%D0%B8-%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%B0-%D0%91%D0%BE%D0%B3%D0%BE%D0%B6%D0%B0%D0%B2%D1%86%D0%B0.jpeg"
     },
     {
-      "id": "283b",
-      "title": "Pancakes",
-      "description": "Fluffy and delicious pancakes.",
+      "id": "9",
+      "title": "Yarpaq Dolmasi",
+      "description": "Grape leaves stuffed with a mix of rice, minced meat, and herbs.",
       "ingredients": [
-        "Flour",
-        "Eggs",
-        "Milk",
-        "Sugar"
+        "Grape Leaves",
+        "Ground Beef",
+        "Rice",
+        "Dill",
+        "Parsley"
       ],
       "preparationSteps": [
-        "Mix ingredients",
-        "Cook on skillet"
+        "Mix rice, meat, and herbs.",
+        "Wrap filling in grape leaves.",
+        "Cook with water and lemon juice."
       ],
       "tags": [
-        "Breakfast",
-        "Easy"
+        "Appetizer",
+        "Traditional"
+      ],
+      "difficulty": "Medium",
+      "lastUpdated": "2024-12-22T13:04:43.616Z",
+      "bannerImage": "https://chefshamy.com/wp-content/uploads/2017/04/grape-leaves-16-1.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Kebab (Lula Kebab)",
+      "description": "Grilled skewers of minced lamb mixed with onions and spices.",
+      "ingredients": [
+        "Ground Lamb",
+        "Onions",
+        "Garlic",
+        "Cumin",
+        "Salt and Pepper"
+      ],
+      "preparationSteps": [
+        "Mix ground lamb with spices and onions.",
+        "Shape onto skewers.",
+        "Grill until cooked."
+      ],
+      "tags": [
+        "Barbecue",
+        "Traditional"
       ],
       "difficulty": "Easy",
-      "lastUpdated": "2024-12-19T10:00:00Z"
+      "lastUpdated": "2024-12-22T16:30:00Z",
+      "bannerImage": "https://inter.az/wp-content/uploads/2024/05/kabablar.jpg"
     }
   ],
   "messages": []
