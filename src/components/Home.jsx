@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getRecipes } from "../api/recipeApi";
 import "../styles/Home.css";
+import Madina from "../../assets/member1.png";
+import Aysu from "../../assets/member2.png";
 
 const Home = () => {
   const [featuredRecipes, setFeaturedRecipes] = useState([]);
@@ -60,7 +62,7 @@ const Home = () => {
         <div className="team-grid">
           <div className="team-member">
             <img
-              src="https://cdn0.iconfinder.com/data/icons/people-groups/512/User_Female-512.png"
+              src={Madina}
               alt="Team Member"
               className="team-image"
             />
@@ -69,7 +71,7 @@ const Home = () => {
           </div>
           <div className="team-member">
             <img
-              src="https://cdn0.iconfinder.com/data/icons/people-groups/512/User_Female-512.png"
+              src={Aysu}
               alt="Team Member"
               className="team-image"
             />
