@@ -7,37 +7,44 @@ import "../styles/Recipes.css";
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
   const [showForm, setShowForm] = useState(false);
-  const [selectedRecipes, setSelectedRecipes] = useState([]);
-
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+  const [totalRecipes, setTotalRecipes] = useState(0);
 
   useEffect(() => {
-    const fetchRecipes = async () => {
+    const fetchInitialRecipes = async () => {
       try {
-        const data = await getRecipes();
-        setRecipes(data);
+        setIsLoading(true);
+        const { recipes: initialRecipes, total } = await getRecipes(1, 2);
+        setRecipes(initialRecipes);
+        setTotalRecipes(total);
+        setCurrentPage(1);
       } catch (error) {
         console.error("Failed to fetch recipes:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
-    fetchRecipes();
+    fetchInitialRecipes();
   }, []);
 
-
-  
-  const handleRecipeAdded = (newRecipe) => {
-    setRecipes((prevRecipes) => [newRecipe, ...prevRecipes]);
-    setShowForm(false);
-  };
-
-  const handleRecipeUpdated = (id, updatedRecipe) => {
-    setRecipes((prevRecipes) =>
-      prevRecipes.map((recipe) => (recipe.id === id ? updatedRecipe : recipe))
-    );
-  };
-
-  const handleRecipeDeleted = (id) => {
-    setRecipes((prevRecipes) => prevRecipes.filter((recipe) => recipe.id !== id));
+  const fetchMoreRecipes = async () => {
+    try {
+      setIsLoading(true);
+      const { recipes: moreRecipes } = await getRecipes(currentPage + 1, 10);
+      setRecipes((prevRecipes) => {
+        const newRecipes = moreRecipes.filter(
+          (newRecipe) => !prevRecipes.some((recipe) => recipe.id === newRecipe.id)
+        );
+        return [...prevRecipes, ...newRecipes];
+      });
+      setCurrentPage((prevPage) => prevPage + 1);
+    } catch (error) {
+      console.error("Failed to fetch more recipes:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -49,17 +56,24 @@ const Recipes = () => {
         </button>
       </div>
 
-      {showForm && <RecipeForm onRecipeAdded={handleRecipeAdded} />}
+      {showForm && <RecipeForm />}
 
       <div className="recipes-grid">
-        {recipes.map((recipe) => (
-          <Recipe
-            key={recipe.id}
-            recipe={recipe}
-            onUpdate={handleRecipeUpdated}
-            onDelete={handleRecipeDeleted}
-          />
-        ))}
+        {recipes.length > 0 ? (
+          recipes.map((recipe) => <Recipe key={recipe.id} recipe={recipe} />)
+        ) : (
+          <p>No recipes available.</p>
+        )}
+      </div>
+
+      <div className="load-more-container">
+        <button
+          onClick={fetchMoreRecipes}
+          disabled={isLoading || recipes.length >= totalRecipes}
+          className="load-more-button"
+        >
+          {isLoading ? "Loading..." : recipes.length >= totalRecipes ? "No More Recipes" : "Load More"}
+        </button>
       </div>
     </div>
   );

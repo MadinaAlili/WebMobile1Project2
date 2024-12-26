@@ -1,33 +1,33 @@
 .home-container {
     background-color: #f7fafc;
     font-family: Arial, sans-serif;
-}
-
-.hero {
+  }
+  
+  .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px;
     background-color: #2f855a;
     color: white;
-}
-
-.hero-content {
+  }
+  
+  .hero-content {
     max-width: 50%;
-}
-
-.hero-title {
+  }
+  
+  .hero-title {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
-}
-
-.hero-description {
+  }
+  
+  .hero-description {
     font-size: 1.2rem;
     margin-bottom: 20px;
-}
-
-.hero-button {
+  }
+  
+  .hero-button {
     padding: 10px 20px;
     font-size: 1rem;
     background-color: #dd6b20;
@@ -35,37 +35,37 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.hero-button:hover {
+  }
+  
+  .hero-button:hover {
     background-color: #c05621;
-}
-
-.hero-image {
+  }
+  
+  .hero-image {
     width: 45%;
     border-radius: 10px;
-}
-
-/* Featured Recipes Section */
-.featured-recipes {
+  }
+  
+  /* Featured Recipes Section */
+  .featured-recipes {
     padding: 40px;
     text-align: center;
-}
-
-.section-title {
+  }
+  
+  .section-title {
     font-size: 2.5rem;
     color: #2f855a;
     margin-bottom: 20px;
-}
-
-.recipes-grid {
+  }
+  
+  .recipes-grid {
     display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-.recipe-card {
+  }
+  
+  .recipe-card {
     background-color: white;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
@@ -74,44 +74,43 @@
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-}
-
-.recipe-card:hover {
+  }
+  
+  .recipe-card:hover {
     transform: scale(1.05);
-}
-
-.recipe-image {
+  }
+  
+  .recipe-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
-}
-
-.recipe-title {
+  }
+  
+  .recipe-title {
     font-size: 1.5rem;
     color: #2c5282;
     margin: 15px 0;
-}
-
-.recipe-description {
+  }
+  
+  .recipe-description {
     font-size: 1rem;
     color: #4a5568;
-}
-
-/* Our Team Section */
-.our-team {
+  }
+  
+  .our-team {
     padding: 40px;
     text-align: center;
     background-color: #edf2f7;
-}
-
-.team-grid {
+  }
+  
+  .team-grid {
     display: flex;
     gap: 20px;
     justify-content: center;
-}
-
-.team-member {
+  }
+  
+  .team-member {
     background-color: white;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
@@ -119,23 +118,23 @@
     width: 200px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.team-image {
+  }
+  
+  .team-image {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 15px;
-}
-
-.team-name {
+  }
+  
+  .team-name {
     font-size: 1.25rem;
     font-weight: bold;
     color: #2f855a;
-}
-
-.team-role {
+  }
+  
+  .team-role {
     font-size: 1rem;
     color: #4a5568;
-}
+  }
