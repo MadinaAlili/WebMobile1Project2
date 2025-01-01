@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { deleteRecipe, updateRecipe } from "../api/recipeApi";
 import "../styles/Recipe.css";
 
-const Recipe = ({ recipe, onDelete, onUpdate }) => {
+const Recipe = ({ recipe, isSelected, onSelect }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedRecipe, setEditedRecipe] = useState({ ...recipe });
 
@@ -27,7 +27,6 @@ const Recipe = ({ recipe, onDelete, onUpdate }) => {
         lastUpdated: new Date().toISOString(),
       };
       await updateRecipe(recipe.id, updatedRecipe);
-      onUpdate(recipe.id, updatedRecipe);
       alert("Recipe updated successfully!");
       setIsEditing(false);
     } catch (error) {
@@ -39,7 +38,6 @@ const Recipe = ({ recipe, onDelete, onUpdate }) => {
     if (window.confirm("Are you sure you want to delete this recipe?")) {
       try {
         await deleteRecipe(recipe.id);
-        onDelete(recipe.id);
         alert("Recipe deleted successfully!");
       } catch (error) {
         console.error("Failed to delete recipe:", error);
@@ -47,13 +45,16 @@ const Recipe = ({ recipe, onDelete, onUpdate }) => {
     }
   };
 
-  
-
   return (
     <div className="recipe-card">
+      <input
+        type="checkbox"
+        checked={isSelected}
+        onChange={onSelect}
+        className="recipe-select-checkbox"
+      />
       {isEditing ? (
         <div className="recipe-edit-form">
-          
           <input
             type="text"
             name="title"
@@ -112,7 +113,6 @@ const Recipe = ({ recipe, onDelete, onUpdate }) => {
         </div>
       ) : (
         <>
-        
           <img src={recipe.bannerImage} alt={recipe.title} className="recipe-image" />
           <h3 className="recipe-title">{recipe.title}</h3>
           <p className="recipe-description">{recipe.description}</p>
