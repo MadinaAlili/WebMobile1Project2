@@ -95,11 +95,6 @@ const Home = () => {
             <p className="project-description">Our second project as a team in Web & Mobile 1 course. a Recipe Manager App using React. The app allows users to create, view, edit, delete, and organize recipes.</p>
             <a href="https://github.com/MadinaAlili/WebMobile1Project2" className="project-link">Recipe App Project Link</a>
           </div>
-          <div className="project-item">
-            <h3 className="project-title">Personal Webpages</h3>
-            <p className="project-description">Our personal webpage project individually in Web & Mobile 1 course.</p>
-            <a href="https://aysurahimli.github.io/personalwebpagewm1.github.io/" className="project-link">Personal Webpage Link-Aysu</a>
-          </div>
         </div>
       </section>
     </div>
