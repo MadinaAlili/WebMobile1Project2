@@ -81,6 +81,27 @@ const Home = () => {
           
         </div>
       </section>
+
+      <section className="our-projects">
+        <h2 className="section-title">Our Projects</h2>
+        <div className="projects-list">
+          <div className="project-item">
+            <h3 className="project-title">Auto Form Filler</h3>
+            <p className="project-description">Our first project as a team in Web & Mobile 1 course. A Chrome extension that acts as an intelligent auto form filler for job applications and other forms.</p>
+            <a href="https://github.com/aysurahimli/web-mobile-project1-team11" className="project-link">Chrome Extension Project Link</a>
+          </div>
+          <div className="project-item">
+            <h3 className="project-title">Recipe App</h3>
+            <p className="project-description">Our second project as a team in Web & Mobile 1 course. a Recipe Manager App using React. The app allows users to create, view, edit, delete, and organize recipes.</p>
+            <a href="https://github.com/MadinaAlili/WebMobile1Project2" className="project-link">Recipe App Project Link</a>
+          </div>
+          <div className="project-item">
+            <h3 className="project-title">Personal Webpages</h3>
+            <p className="project-description">Our personal webpage project individually in Web & Mobile 1 course.</p>
+            <a href="https://aysurahimli.github.io/personalwebpagewm1.github.io/" className="project-link">Personal Webpage Link-Aysu</a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
