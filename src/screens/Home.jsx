@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { getRecipes } from "../api/recipeApi";
 import "../styles/Home.css";
 import Madina from "../../assets/member1.png";
@@ -6,12 +8,14 @@ import Aysu from "../../assets/member2.png";
 
 const Home = () => {
   const [featuredRecipes, setFeaturedRecipes] = useState([]);
-
+  const navigate = useNavigate();
+  
   useEffect(() => {
     const fetchFeaturedRecipes = async () => {
       try {
-        const recipes = await getRecipes();
-        setFeaturedRecipes(recipes.slice(0, 3));
+        const { recipes } = await getRecipes(1, 3);
+        const lastThreeRecipes = recipes.slice(-3).reverse();
+        setFeaturedRecipes(lastThreeRecipes);
       } catch (error) {
         console.error("Failed to fetch recipes:", error);
       }
@@ -22,14 +26,16 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      
+   
       <section className="hero">
         <div className="hero-content">
           <h1 className="hero-title">Welcome to Recipe Manager</h1>
           <p className="hero-description">
             Discover, create, and organize your favorite recipes with ease.
           </p>
-          <button className="hero-button">Get Started</button>
+          <button className="hero-button" onClick={() => navigate("/recipes")}>
+            Get Started
+          </button>
         </div>
         <img
           src="https://www.samtell.com/hs-fs/hubfs/Blogs/Four-Scrumptous-Tacos-Lined-up-with-ingredients-around-them-1.jpg?width=1800&name=Four-Scrumptous-Tacos-Lined-up-with-ingredients-around-them-1.jpg"
@@ -38,9 +44,8 @@ const Home = () => {
         />
       </section>
 
- 
       <section className="featured-recipes">
-        <h2 className="section-title">Featured Recipes</h2>
+        <h2 className="section-title">Newest Recipes</h2>
         <div className="recipes-grid">
           {featuredRecipes.map((recipe) => (
             <div key={recipe.id} className="recipe-card">
@@ -56,29 +61,19 @@ const Home = () => {
         </div>
       </section>
 
-
       <section className="our-team">
         <h2 className="section-title">Our Team</h2>
         <div className="team-grid">
           <div className="team-member">
-            <img
-              src={Madina}
-              alt="Team Member"
-              className="team-image"
-            />
+            <img src={Madina} alt="Team Member" className="team-image" />
             <h3 className="team-name">Madina Alili</h3>
             <p className="team-role">Student</p>
           </div>
           <div className="team-member">
-            <img
-              src={Aysu}
-              alt="Team Member"
-              className="team-image"
-            />
+            <img src={Aysu} alt="Team Member" className="team-image" />
             <h3 className="team-name">Aysu Rahimli</h3>
             <p className="team-role">Student</p>
           </div>
-          
         </div>
       </section>
 
@@ -97,6 +92,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };

@@ -14,16 +14,39 @@
       "preparationSteps": [
         "Cook lamb with onions and spices.",
         "Steam rice with saffron.",
-        "Layer rice and lamb",
-        "add dried fruits.a"
+        "Layer rice and lamb, add dried fruits."
       ],
       "tags": [
         "Traditional",
         "Dinner"
       ],
       "difficulty": "Medium",
-      "lastUpdated": "2024-12-25T18:16:18.787Z",
+      "lastUpdated": "2024-12-22T15:00:00Z",
       "bannerImage": "https://blog.remitly.com/wp-content/uploads/2023/09/azervaijani-plov-scaled.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Dushbara",
+      "description": "Tiny dumplings filled with meat, served in a flavorful broth.",
+      "ingredients": [
+        "Flour",
+        "Ground Lamb or Beef",
+        "Onions",
+        "Garlic",
+        "Broth"
+      ],
+      "preparationSteps": [
+        "Prepare dumpling dough and filling.",
+        "Shape into small dumplings.",
+        "Boil in broth and serve hot."
+      ],
+      "tags": [
+        "Soup",
+        "Traditional"
+      ],
+      "difficulty": "Hard",
+      "lastUpdated": "2024-12-22T13:05:28.778Z",
+      "bannerImage": "https://folt.az/wp-content/uploads/2023/07/%D0%92%D0%B0%D1%80%D0%B5%D0%BD%D0%B8%D0%BA%D0%B8-%D0%B8-%D0%BF%D0%B5%D0%BB%D1%8C%D0%BC%D0%B5%D0%BD%D0%B8-%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%B0-%D0%91%D0%BE%D0%B3%D0%BE%D0%B6%D0%B0%D0%B2%D1%86%D0%B0.jpeg"
     },
     {
       "id": "9",
@@ -37,18 +60,16 @@
         "Parsley"
       ],
       "preparationSteps": [
-        "Mix rice",
-        "meat",
-        "and herbs.",
+        "Mix rice, meat, and herbs.",
         "Wrap filling in grape leaves.",
-        "Cook with water and lemon juice.khkh"
+        "Cook with water and lemon juice."
       ],
       "tags": [
         "Appetizer",
         "Traditional"
       ],
       "difficulty": "Medium",
-      "lastUpdated": "2024-12-25T18:12:48.565Z",
+      "lastUpdated": "2024-12-22T13:04:43.616Z",
       "bannerImage": "https://chefshamy.com/wp-content/uploads/2017/04/grape-leaves-16-1.jpg"
     },
     {
@@ -76,24 +97,86 @@
       "bannerImage": "https://inter.az/wp-content/uploads/2024/05/kabablar.jpg"
     },
     {
-      "id": "95b7",
-      "title": "ABCD",
-      "description": "abdc",
+      "id": "67",
+      "title": "Plova",
+      "description": "A traditional Azerbaijani rice dish with saffron, dried fruits, and lamb.",
       "ingredients": [
-        "a",
-        "v",
-        "nb",
+        "Rice",
+        "Saffron",
+        "Lamb",
+        "Dried Apricots",
+        "Onions"
+      ],
+      "preparationSteps": [
+        "Cook lamb with onions and spices.",
+        "Steam rice with saffron.",
+        "Layer rice and lamb, add dried fruits."
+      ],
+      "tags": [
+        "Traditional",
+        "Dinner"
+      ],
+      "difficulty": "Medium",
+      "lastUpdated": "2024-12-22T15:00:00Z",
+      "bannerImage": "https://blog.remitly.com/wp-content/uploads/2023/09/azervaijani-plov-scaled.jpg"
+    },
+    {
+      "id": "99",
+      "title": "Plova",
+      "description": "A traditional Azerbaijani rice dish with saffron, dried fruits, and lamb.",
+      "ingredients": [
+        "Rice",
+        "Saffron",
+        "Lamb",
+        "Dried Apricots",
+        "Onions"
+      ],
+      "preparationSteps": [
+        "Cook lamb with onions and spices.",
+        "Steam rice with saffron.",
+        "Layer rice and lamb, add dried fruits."
+      ],
+      "tags": [
+        "Traditional",
+        "Dinner"
+      ],
+      "difficulty": "Medium",
+      "lastUpdated": "2024-12-22T15:00:00Z",
+      "bannerImage": "https://blog.remitly.com/wp-content/uploads/2023/09/azervaijani-plov-scaled.jpg"
+    },
+    {
+      "id": "def7",
+      "title": "a",
+      "description": "a",
+      "ingredients": [
         "a"
       ],
       "preparationSteps": [
-        "as\nxs\ncsa"
+        "a"
       ],
       "tags": [
-        "adsad"
+        "a"
       ],
       "difficulty": "Easy",
-      "bannerImage": "https://picsum.photos/id/870/200/300?grayscale&blur=2",
-      "lastUpdated": "2024-12-25T18:17:54.869Z"
+      "bannerImage": "",
+      "lastUpdated": "2025-01-02T16:45:37.299Z"
+    },
+    {
+      "id": "b680",
+      "title": "b",
+      "description": "b",
+      "ingredients": [
+        "b"
+      ],
+      "preparationSteps": [
+        "b"
+      ],
+      "tags": [
+        "b"
+      ],
+      "difficulty": "Easy",
+      "bannerImage": "b",
+      "lastUpdated": "2025-01-02T16:46:04.445Z"
     }
   ],
   "messages": []

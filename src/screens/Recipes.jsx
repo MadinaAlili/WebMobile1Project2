@@ -21,7 +21,7 @@ const Recipes = () => {
         setTotalRecipes(total);
         setCurrentPage(1);
       } catch (error) {
-        console.error("Failed to fetch recipes:", error);
+        console.error("failed", error);
       } finally {
         setIsLoading(false);
       }
@@ -42,7 +42,7 @@ const Recipes = () => {
       });
       setCurrentPage((prevPage) => prevPage + 1);
     } catch (error) {
-      console.error("Failed to fetch more recipes:", error);
+      console.error("pagianation failed:", error);
     } finally {
       setIsLoading(false);
     }
@@ -74,7 +74,7 @@ const Recipes = () => {
     <div className="recipes-container">
       <div className="header">
         <h1 className="title">All Recipes</h1>
-        <div>
+        <div className="action-buttons">
           <button onClick={() => setShowForm(!showForm)} className="add-recipe-button">
             {showForm ? "Close" : "Add Recipe"}
           </button>
