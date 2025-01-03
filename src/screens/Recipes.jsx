@@ -14,8 +14,8 @@ const Recipes = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterTag, setFilterTag] = useState("");
   const [filterDifficulty, setFilterDifficulty] = useState("");
-  const [sortOption, setSortOption] = useState("lastUpdated");
-  
+  const [sortOption, setSortOption] = useState("");
+
   useEffect(() => {
     const fetchInitialRecipes = async () => {
       try {
@@ -111,6 +111,7 @@ const Recipes = () => {
       }
       return true;
     })
+
     .sort((a, b) => {
 
       if (sortOption === "title") return a.title.localeCompare(b.title);
@@ -119,6 +120,7 @@ const Recipes = () => {
       if (sortOption === "difficulty") return a.difficulty.localeCompare(b.difficulty);
       return 0;
     });
+
 
   return (
     <div className="recipes-container">
@@ -138,6 +140,8 @@ const Recipes = () => {
         >
           <option value="">All Tags</option>
           <option value="vegan">Vegan</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="quick">Quick Meal</option>
           <option value="dessert">Dessert</option>
           <option value="dinner">Dinner</option>
           <option value="traditional">Traditional</option>
@@ -172,11 +176,25 @@ const Recipes = () => {
       </div>
 
       
-      <ul className="recipe-list">
-        {filteredRecipes.map((recipe) => (
-          <li key={recipe.id}>{recipe.title}</li>
-        ))}
-      </ul>
+      {searchTerm.trim() === "" ? (
+        <p className="no-search-message">Start typing to search for recipes...</p>
+      ) : filteredRecipes.length > 0 ? (
+        <ul className="recipe-list">
+          {filteredRecipes.map((recipe) => (
+            <li key={recipe.id} className="recipe-item">
+              <h2>{recipe.title}</h2>
+              <p><strong>Description:</strong> {recipe.description}</p>
+              <p><strong>Ingredients:</strong> {recipe.ingredients.join(", ")}</p>
+              <p><strong>Difficulty:</strong> {recipe.difficulty}</p>
+              <p><strong>Tags:</strong> {recipe.tags.join(", ")}</p>
+              <p><strong>Last Updated:</strong> {new Date(recipe.lastUpdated).toLocaleString()}</p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="no-recipes-message">No recipes match your search.</p>
+      )}
+
 
 
       <div className="header">

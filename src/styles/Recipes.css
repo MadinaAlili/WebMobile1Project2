@@ -165,3 +165,11 @@
   transform: scale(1.02);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+.no-search-message,
+.no-recipes-message {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: gray;
+}
