@@ -15,6 +15,7 @@ const Recipes = () => {
   const [filterTag, setFilterTag] = useState("");
   const [filterDifficulty, setFilterDifficulty] = useState("");
   const [sortOption, setSortOption] = useState("lastUpdated");
+  
   useEffect(() => {
     const fetchInitialRecipes = async () => {
       try {
@@ -72,6 +73,7 @@ const Recipes = () => {
 
     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
   };
+
   useEffect(() => {
     fetch("http://localhost:3001/recipes")
       .then((response) => response.json())
@@ -80,7 +82,7 @@ const Recipes = () => {
 
   const filteredRecipes = recipes
     .filter((recipe) => {
-      // Search term filtering
+
       const matchesSearch =
         recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         recipe.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -89,6 +91,7 @@ const Recipes = () => {
         );
       return matchesSearch;
     })
+
     .filter((recipe) => {
       if (filterTag) {
         return (
@@ -102,14 +105,14 @@ const Recipes = () => {
     
     
     .filter((recipe) => {
-      // Filter by difficulty
+
       if (filterDifficulty) {
         return recipe.difficulty && recipe.difficulty.toLowerCase() === filterDifficulty.toLowerCase();
       }
       return true;
     })
     .sort((a, b) => {
-      // Sorting logic
+
       if (sortOption === "title") return a.title.localeCompare(b.title);
       if (sortOption === "createTime") return new Date(a.createTime) - new Date(b.createTime);
       if (sortOption === "lastUpdated") return new Date(b.lastUpdated) - new Date(a.lastUpdated);
@@ -119,22 +122,6 @@ const Recipes = () => {
 
   return (
     <div className="recipes-container">
-      <div className="header">
-        <h1 className="title">All Recipes</h1>
-        <div className="action-buttons">
-          <button onClick={() => setShowForm(!showForm)} className="add-recipe-button">
-            {showForm ? "Close" : "Add Recipe"}
-          </button>
-          <button
-            onClick={handleShare}
-            disabled={selectedRecipes.length === 0}
-            className="share-button"
-          >
-            Share Selected Recipes
-          </button>
-        </div>
-      </div>
-      
       <div className="controls-container">
         <input
           type="text"
@@ -184,12 +171,29 @@ const Recipes = () => {
         </select>
       </div>
 
-      {/* Recipe List */}
+      
       <ul className="recipe-list">
         {filteredRecipes.map((recipe) => (
           <li key={recipe.id}>{recipe.title}</li>
         ))}
       </ul>
+
+
+      <div className="header">
+        <h1 className="title">All Recipes</h1>
+        <div className="action-buttons">
+          <button onClick={() => setShowForm(!showForm)} className="add-recipe-button">
+            {showForm ? "Close" : "Add Recipe"}
+          </button>
+          <button
+            onClick={handleShare}
+            disabled={selectedRecipes.length === 0}
+            className="share-button"
+          >
+            Share Selected Recipes
+          </button>
+        </div>
+      </div>
 
 
       {showForm && <RecipeForm />}

@@ -97,86 +97,51 @@
       "bannerImage": "https://inter.az/wp-content/uploads/2024/05/kabablar.jpg"
     },
     {
-      "id": "67",
-      "title": "Plova",
-      "description": "A traditional Azerbaijani rice dish with saffron, dried fruits, and lamb.",
+      "id": "f9a9",
+      "title": "Shekerbura",
+      "description": "A popular Azerbaijani sweet pastry, filled with ground almonds, hazelnuts, or walnuts.",
       "ingredients": [
-        "Rice",
-        "Saffron",
-        "Lamb",
-        "Dried Apricots",
-        "Onions"
+        "Ground Almonds",
+        "Hazelnuts",
+        "Walnuts."
       ],
       "preparationSteps": [
-        "Cook lamb with onions and spices.",
-        "Steam rice with saffron.",
-        "Layer rice and lamb, add dried fruits."
+        "Prepare the dough.",
+        "Prepare the filling.",
+        "Shape the Shekerbura.",
+        "Bake."
       ],
       "tags": [
-        "Traditional",
-        "Dinner"
+        "Dessert"
       ],
       "difficulty": "Medium",
-      "lastUpdated": "2024-12-22T15:00:00Z",
-      "bannerImage": "https://blog.remitly.com/wp-content/uploads/2023/09/azervaijani-plov-scaled.jpg"
+      "bannerImage": "https://img.cuisineaz.com/1024x576/2019/04/30/i146823-shekerbura.jpeg",
+      "lastUpdated": "2025-01-03T15:49:42.955Z"
     },
     {
-      "id": "99",
-      "title": "Plova",
-      "description": "A traditional Azerbaijani rice dish with saffron, dried fruits, and lamb.",
+      "id": "c1bb",
+      "title": "Pakhlava",
+      "description": "A highly significant component of Azerbaijani tea tables and a traditional dessert prepared for the Novruz holiday.",
       "ingredients": [
-        "Rice",
-        "Saffron",
-        "Lamb",
-        "Dried Apricots",
-        "Onions"
+        "Nuts",
+        "Sugar",
+        "Syrup"
       ],
       "preparationSteps": [
-        "Cook lamb with onions and spices.",
-        "Steam rice with saffron.",
-        "Layer rice and lamb, add dried fruits."
+        "Prepare the dough.",
+        "Prepare the filling.",
+        "Roll out the dough.",
+        "Assemble the Pakhlava.",
+        "Bake.",
+        "Prepare the syrup.",
+        "Syrup the Pakhlava."
       ],
       "tags": [
-        "Traditional",
-        "Dinner"
+        "Dessert"
       ],
       "difficulty": "Medium",
-      "lastUpdated": "2024-12-22T15:00:00Z",
-      "bannerImage": "https://blog.remitly.com/wp-content/uploads/2023/09/azervaijani-plov-scaled.jpg"
-    },
-    {
-      "id": "def7",
-      "title": "a",
-      "description": "a",
-      "ingredients": [
-        "a"
-      ],
-      "preparationSteps": [
-        "a"
-      ],
-      "tags": [
-        "a"
-      ],
-      "difficulty": "Easy",
-      "bannerImage": "",
-      "lastUpdated": "2025-01-02T16:45:37.299Z"
-    },
-    {
-      "id": "b680",
-      "title": "b",
-      "description": "b",
-      "ingredients": [
-        "b"
-      ],
-      "preparationSteps": [
-        "b"
-      ],
-      "tags": [
-        "b"
-      ],
-      "difficulty": "Easy",
-      "bannerImage": "b",
-      "lastUpdated": "2025-01-02T16:46:04.445Z"
+      "bannerImage": "https://azerbaijan.travel/fit1600x900/center/pages/6047/26fb8028-85a5-4b12-85ec-10cfc1b11be5.jpg",
+      "lastUpdated": "2025-01-03T16:04:45.401Z"
     }
   ],
   "messages": []
