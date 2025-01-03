@@ -68,11 +68,13 @@ const Home = () => {
             <img src={Madina} alt="Team Member" className="team-image" />
             <h3 className="team-name">Madina Alili</h3>
             <p className="team-role">Student</p>
+            <a className="profile-link"href="https://github.com/MadinaAlili">MadinaAlili</a>
           </div>
           <div className="team-member">
             <img src={Aysu} alt="Team Member" className="team-image" />
             <h3 className="team-name">Aysu Rahimli</h3>
             <p className="team-role">Student</p>
+            <a className="profile-link" href="https://github.com/aysurahimli">aysurahimli</a>
           </div>
         </div>
       </section>
@@ -86,8 +88,8 @@ const Home = () => {
             <a href="https://github.com/aysurahimli/web-mobile-project1-team11" className="project-link">Chrome Extension Project Link</a>
           </div>
           <div className="project-item">
-            <h3 className="project-title">Recipe App</h3>
-            <p className="project-description">Our second project as a team in Web & Mobile 1 course. a Recipe Manager App using React. The app allows users to create, view, edit, delete, and organize recipes.</p>
+            <h3 className="project-title">Recipe Manager App</h3>
+            <p className="project-description">Our second project as a team in Web & Mobile 1 course. A Recipe Manager App using React. The app allows users to create, view, edit, delete, and organize recipes.</p>
             <a href="https://github.com/MadinaAlili/WebMobile1Project2" className="project-link">Recipe App Project Link</a>
           </div>
         </div>
