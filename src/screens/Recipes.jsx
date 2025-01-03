@@ -11,7 +11,10 @@ const Recipes = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [totalRecipes, setTotalRecipes] = useState(0);
   const [selectedRecipes, setSelectedRecipes] = useState([]);
-
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterTag, setFilterTag] = useState("");
+  const [filterDifficulty, setFilterDifficulty] = useState("");
+  const [sortOption, setSortOption] = useState("lastUpdated");
   useEffect(() => {
     const fetchInitialRecipes = async () => {
       try {
@@ -69,6 +72,50 @@ const Recipes = () => {
 
     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
   };
+  useEffect(() => {
+    fetch("http://localhost:3001/recipes")
+      .then((response) => response.json())
+      .then((data) => setRecipes(data));
+  }, []);
+
+  const filteredRecipes = recipes
+    .filter((recipe) => {
+      // Search term filtering
+      const matchesSearch =
+        recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        recipe.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        recipe.ingredients.some((ingredient) =>
+          ingredient.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      return matchesSearch;
+    })
+    .filter((recipe) => {
+      if (filterTag) {
+        return (
+          recipe.tags &&
+          Array.isArray(recipe.tags) &&
+          recipe.tags.some((tag) => tag.toLowerCase() === filterTag.toLowerCase())
+        );
+      }
+      return true;
+    })
+    
+    
+    .filter((recipe) => {
+      // Filter by difficulty
+      if (filterDifficulty) {
+        return recipe.difficulty && recipe.difficulty.toLowerCase() === filterDifficulty.toLowerCase();
+      }
+      return true;
+    })
+    .sort((a, b) => {
+      // Sorting logic
+      if (sortOption === "title") return a.title.localeCompare(b.title);
+      if (sortOption === "createTime") return new Date(a.createTime) - new Date(b.createTime);
+      if (sortOption === "lastUpdated") return new Date(b.lastUpdated) - new Date(a.lastUpdated);
+      if (sortOption === "difficulty") return a.difficulty.localeCompare(b.difficulty);
+      return 0;
+    });
 
   return (
     <div className="recipes-container">
@@ -87,6 +134,63 @@ const Recipes = () => {
           </button>
         </div>
       </div>
+      
+      <div className="controls-container">
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search recipes..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+
+        <select
+          value={filterTag}
+          className="filter-dropdown"
+          onChange={(e) => setFilterTag(e.target.value)}
+        >
+          <option value="">All Tags</option>
+          <option value="vegan">Vegan</option>
+          <option value="dessert">Dessert</option>
+          <option value="dinner">Dinner</option>
+          <option value="traditional">Traditional</option>
+          <option value="appetizer">Appetizer</option>
+          <option value="soup">Soup</option>
+          <option value="barbecue">Barbecue</option>
+
+
+        </select>
+
+        <select
+          value={filterDifficulty}
+          className="filter-dropdown"
+          onChange={(e) => setFilterDifficulty(e.target.value)}
+        >
+          <option value="">All Difficulty Levels</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <select
+          value={sortOption}
+          className="sort-dropdown"
+          onChange={(e) => setSortOption(e.target.value)}
+        >
+          <option value="lastUpdated">Last Updated</option>
+          <option value="title">Title</option>
+          <option value="createTime">Create Time</option>
+          <option value="difficulty">Difficulty</option>
+        </select>
+      </div>
+
+      {/* Recipe List */}
+      <ul className="recipe-list">
+        {filteredRecipes.map((recipe) => (
+          <li key={recipe.id}>{recipe.title}</li>
+        ))}
+      </ul>
+
 
       {showForm && <RecipeForm />}
 
