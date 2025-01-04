@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "../styles/Contact.css"
+import { sendMessage } from "../api/recipeApi";
+
+
 const Contact = () => {
   const [subject, setSubject] = useState("");
   const [email, setEmail] = useState("");
@@ -10,11 +13,7 @@ const Contact = () => {
     const messageData = { subject, email, message };
 
     try {
-      await fetch("http://localhost:3001/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(messageData),
-      });
+      await sendMessage(messageData);
       alert("Message sent successfully!");
       setSubject("");
       setEmail("");
