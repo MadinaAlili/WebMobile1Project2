@@ -4,6 +4,7 @@ import Home from "./screens/Home";
 import Recipes from "./screens/Recipes";
 import "./styles/App.css";
 import Navbar from "./components/Navbar";
+import Contact from "./screens/Contact";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/recipes" element={<Recipes />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>

@@ -14,7 +14,7 @@ const Recipes = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterTag, setFilterTag] = useState("");
   const [filterDifficulty, setFilterDifficulty] = useState("");
-  const [sortOption, setSortOption] = useState("");
+  const [sortOption, setSortOption] = useState("lastUpdated");
 
   useEffect(() => {
     const fetchInitialRecipes = async () => {
