@@ -1,4 +1,5 @@
 const API_URL = "http://localhost:3001/recipes";
+const API_BASE_URL = "http://localhost:3001";
 
 export const getRecipes = async (page = 1, limit = 10) => {
   try {
@@ -65,6 +66,25 @@ export const addRecipe = async (recipe) => {
     return await response.json();
   } catch (error) {
     console.error("Error adding recipe:", error);
+    throw error;
+  }
+};
+
+export const sendMessage = async (messageData) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/messages`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(messageData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send message");
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error sending message:", error);
     throw error;
   }
 };
