@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../styles/Contact.css"
 const Contact = () => {
   const [subject, setSubject] = useState("");
   const [email, setEmail] = useState("");
@@ -25,12 +25,15 @@ const Contact = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Contact Us</h1>
+    <div className="contact-page">
+    <div className="contact-container">
+    <h1 className="title">Contact Us</h1>
 
+    <form onSubmit={handleSubmit} className="contact-form">
       <input
         type="text"
         placeholder="Subject"
+        className="form-input"
         value={subject}
         onChange={(e) => setSubject(e.target.value)}
         required
@@ -39,6 +42,7 @@ const Contact = () => {
       <input
         type="email"
         placeholder="Email"
+        className="form-input"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
@@ -46,13 +50,16 @@ const Contact = () => {
 
       <textarea
         placeholder="Message"
+        className="form-textarea"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         required
       ></textarea>
 
-      <button type="submit">Send Message</button>
+      <button type="submit" className="submit-button">Send Message</button>
     </form>
+    </div>
+    </div>
   );
 };
 
